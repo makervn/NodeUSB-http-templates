@@ -191,7 +191,6 @@
   </style>
 </head>
 <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
-
 <nav class="navbar navbar-default navbar-fixed-top">
   <div class="container">
     <div class="navbar-header">
@@ -213,7 +212,6 @@
     </div>
   </div>
 </nav>
-
 <div class="jumbotron text-center">
   <h1>Company</h1> 
   <p>We specialize in blablabla</p> 
@@ -226,7 +224,6 @@
     </div>
   </form>
 </div>
-
 <!-- Container (About Section) -->
 <div id="about" class="container-fluid">
   <div class="row">
@@ -241,7 +238,6 @@
     </div>
   </div>
 </div>
-
 <div class="container-fluid bg-grey">
   <div class="row">
     <div class="col-sm-4">
@@ -255,7 +251,6 @@
     </div>
   </div>
 </div>
-
 <!-- Container (Services Section) -->
 <div id="services" class="container-fluid text-center">
   <h2>SERVICES</h2>
@@ -297,7 +292,6 @@
     </div>
   </div>
 </div>
-
 <!-- Container (Portfolio Section) -->
 <div id="portfolio" class="container-fluid text-center bg-grey">
   <h2>Portfolio</h2><br>
@@ -325,7 +319,6 @@
       </div>
     </div>
   </div><br>
-  
   <h2>What our customers say</h2>
   <div id="myCarousel" class="carousel slide text-center" data-ride="carousel">
     <!-- Indicators -->
@@ -334,7 +327,6 @@
       <li data-target="#myCarousel" data-slide-to="1"></li>
       <li data-target="#myCarousel" data-slide-to="2"></li>
     </ol>
-
     <!-- Wrapper for slides -->
     <div class="carousel-inner" role="listbox">
       <div class="item active">
@@ -347,7 +339,6 @@
         <h4>"Could I... BE any more happy with this company?"<br><span>Chandler Bing, Actor, FriendsAlot</span></h4>
       </div>
     </div>
-
     <!-- Left and right controls -->
     <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
       <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
@@ -359,7 +350,6 @@
     </a>
   </div>
 </div>
-
 <!-- Container (Pricing Section) -->
 <div id="pricing" class="container-fluid">
   <div class="text-center">
@@ -426,7 +416,6 @@
     </div>    
   </div>
 </div>
-
 <!-- Container (Contact Section) -->
 <div id="contact" class="container-fluid bg-grey">
   <h2 class="text-center">CONTACT</h2>
@@ -455,17 +444,14 @@
     </div>
   </div>
 </div>
-
 <!-- Image of location/map -->
 <img src="/w3images/map.jpg" class="w3-image w3-greyscale-min" style="width:100%">
-
 <footer class="container-fluid text-center">
   <a href="#myPage" title="To Top">
     <span class="glyphicon glyphicon-chevron-up"></span>
   </a>
   <p>Bootstrap Theme Made By <a href="https://www.w3schools.com" title="Visit w3schools">www.w3schools.com</a></p>
 </footer>
-
 <script>
 $(document).ready(function(){
   // Add smooth scrolling to all links in navbar + footer link
@@ -474,26 +460,21 @@ $(document).ready(function(){
     if (this.hash !== "") {
       // Prevent default anchor click behavior
       event.preventDefault();
-
       // Store hash
       var hash = this.hash;
-
       // Using jQuery's animate() method to add smooth page scroll
       // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
       $('html, body').animate({
         scrollTop: $(hash).offset().top
       }, 900, function(){
-   
         // Add hash (#) to URL when done scrolling (default click behavior)
         window.location.hash = hash;
       });
     } // End if
   });
-  
   $(window).scroll(function() {
     $(".slideanim").each(function(){
       var pos = $(this).offset().top;
-
       var winTop = $(window).scrollTop();
         if (pos < winTop + 600) {
           $(this).addClass("slide");
@@ -502,6 +483,5 @@ $(document).ready(function(){
   });
 })
 </script>
-
 </body>
 </html>
