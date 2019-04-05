@@ -22,10 +22,9 @@ function submitForm() {
     var http = new XMLHttpRequest();
     http.open("GET", "", true);
     http.setRequestHeader("Content-type","application/x-www-form-urlencoded");
-    var params = "toggleTo=" + document.getElementById("switch_1").checked; // probably use document.getElementById(...).value
+    var params = "toggleTo=" + document.getElementById("switch_1").checked;
     http.send(params);
     http.onload = function() {
-        //alert(http.responseText);
     }
 }
 </script>
