@@ -20,7 +20,7 @@ input:checked + .slider:before{-webkit-transform:translateX(26px);-ms-transform:
 <script>
 function submitForm() {
     var http = new XMLHttpRequest();
-    http.open("GET", "?toggleTo=" + document.getElementById("switch_1").checked);
+    http.open("GET", "/?toggleTo=" + document.getElementById("switch_1").checked);
     http.send();
     http.onload = function() {
         
