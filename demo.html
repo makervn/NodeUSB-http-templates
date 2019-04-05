@@ -31,7 +31,7 @@ function submitForm() {
 <body>
 <h1>Smart Home LED</h1>
 <label class="switch">
-    <input type="checkbox" id="switch_1" checked onchange="submitForm()">
+    <input type="checkbox" id="switch_1" {{led-state}} onchange="submitForm()">
 <span class="slider round"></span>
 </label>
 </body>
