@@ -17,11 +17,23 @@ input:checked + .slider:before{-webkit-transform:translateX(26px);-ms-transform:
 .slider.round{border-radius:34px;}
 .slider.round:before{border-radius:50%;}
 </style>
+<script>
+function submitForm() {
+    var http = new XMLHttpRequest();
+    http.open("GET", "", true);
+    http.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+    var params = "toggleTo=" + document.getElementById("switch_1").checked; // probably use document.getElementById(...).value
+    http.send(params);
+    http.onload = function() {
+        //alert(http.responseText);
+    }
+}
+</script>
 </head>
 <body>
 <h1>Smart Home LED</h1>
 <label class="switch">
-<input type="checkbox" name="switch_1" {{led-state}}>
+    <input type="checkbox" id="switch_1" checked onchange="submitForm()">
 <span class="slider round"></span>
 </label>
 </body>
