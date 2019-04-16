@@ -18,9 +18,9 @@ input:checked + .slider:before{-webkit-transform:translateX(26px);-ms-transform:
 .slider.round:before{border-radius:50%;}
 </style>
 <script>
-function submitForm() {
+function submitForm(togglePin, checkboxID) {
   var http = new XMLHttpRequest();
-  http.open("GET", "/?toggleTarget=16&toggleTo=" + document.getElementById("switch_1").checked);
+  http.open("GET", "/?toggleTarget=" + togglePin + "&toggleTo=" + document.getElementById(checkboxID).checked);
   http.send();
   http.onload = function() {
 
@@ -29,9 +29,9 @@ function submitForm() {
 </script>
 </head>
 <body>
-<h1>Smart Home LED</h1>
+<h1>LED 4</h1>
 <label class="switch">
-  <input type="checkbox" id="switch_1" {{led-state}} onchange="submitForm()">
+  <input type="checkbox" id="switch_1" {{led-state}} onchange="submitForm(4, 'switch_1')">
   <span class="slider round"></span>
 </label>
 </body>
