@@ -19,20 +19,20 @@ input:checked + .slider:before{-webkit-transform:translateX(26px);-ms-transform:
 </style>
 <script>
 function submitForm() {
-    var http = new XMLHttpRequest();
-    http.open("GET", "/?toggleTo=" + document.getElementById("switch_1").checked);
-    http.send();
-    http.onload = function() {
-        
-    }
+  var http = new XMLHttpRequest();
+  http.open("GET", "/?toggleTarget=16&toggleTo=" + document.getElementById("switch_1").checked);
+  http.send();
+  http.onload = function() {
+
+  }
 }
 </script>
 </head>
 <body>
 <h1>Smart Home LED</h1>
 <label class="switch">
-    <input type="checkbox" id="switch_1" {{led-state}} onchange="submitForm()">
-<span class="slider round"></span>
+  <input type="checkbox" id="switch_1" {{led-state}} onchange="submitForm()">
+  <span class="slider round"></span>
 </label>
 </body>
 </html>
